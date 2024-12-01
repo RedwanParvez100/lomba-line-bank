@@ -9,11 +9,13 @@
             rel="stylesheet"
             href="./CSS/bootstrap-5.3.3-dist/css/bootstrap.css"
         />
-        <title>Pioneer Bank</title>
+        <title>My Bank</title>
     </head>
     <body>
         <div id="login-area">
-            <h1 class="text-center">Welcome to Pioneer Bank</h1>
+            <h1 class="text-center text-primary">
+                Welcome to Lomba Line Bank!!!
+            </h1>
             <div class="submit-area">
                 <h4>Login</h4>
                 <input
@@ -30,7 +32,7 @@
                     id=""
                 />
                 <br />
-                <button id="login" class="btn btn-success">Enter</button>
+                <button id="login" class="btn btn-primary">Enter</button>
             </div>
         </div>
 
@@ -51,7 +53,7 @@
                 <div class="col-md-4">
                     <div class="balance status">
                         <h5>Balance</h5>
-                        <h2>$ <span id="currentBalance">1240</span></h2>
+                        <h2>$ <span id="currentBalance">1000</span></h2>
                     </div>
                 </div>
             </div>
@@ -66,7 +68,7 @@
                             placeholder="$ amount you want to deposit"
                         />
                         <br />
-                        <button id="addDeposit" class="btn btn-success">
+                        <button id="addDeposit" class="btn btn-primary">
                             Deposit
                         </button>
                     </div>
@@ -81,7 +83,7 @@
                             placeholder="$ amount you want to withdraw"
                         />
                         <br />
-                        <button id="addWithdraw" class="btn btn-success">
+                        <button id="addWithdraw" class="btn btn-primary">
                             Withdraw
                         </button>
                     </div>
@@ -126,10 +128,10 @@
                 return amountNumber;
             }
 
-            function updateSpanText(id, depositNumber) {
+            function updateSpanText(id, addedNumber) {
                 const current = document.getElementById(id).innerText;
                 const currentNumber = parseFloat(current);
-                const totalAmount = depositNumber + currentNumber;
+                const totalAmount = addedNumber + currentNumber;
                 document.getElementById(id).innerText = totalAmount;
             }
         </script>
